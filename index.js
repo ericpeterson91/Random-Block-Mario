@@ -1,41 +1,42 @@
 const characters = [
     {
         name: 'Mario',
-        img: './images/mario.png'
+        image: './images/mario.png'
     },
     {
         name: 'Luigi',
-        img: './images/luigi.png'
+        image: './images/luigi.png'
     },
     {
         name: 'Yoshi',
-        img: './images/yoshi.png'
+        image: './images/yoshi.png'
     },
     {
         name: 'Donkey Kong',
-        img: './images/donkeykong.png'
+        image: './images/donkeykong.png'
     },
     {
         name: 'Peach',
-        img: './images/peach.png'
+        image: './images/peach.png'
     },
     {
         name: 'Bowser',
-        img: './images/bowser.png'
+        image: './images/bowser.png'
     }
 ]
 
 const h4 = document.querySelector('h4')
-const image = document.querySelector('img')
-image.style.animationPlayState = 'paused'
+const block = document.querySelector('img')
+block.style.animationPlayState = 'paused'
 
 
-
-image.onclick = () => {
-    image.style.animationPlayState = 'running'
+block.onclick = () => {
+    block.style.animationPlayState = 'running'
+    const randomIndex = Math.floor(Math.random() * characters.length)
+    const { name, image } = characters[randomIndex]
     setTimeout(() => {
-        image.setAttribute('src', './images/yoshi.png')
-        h4.style.visibility = 'hidden'
+        block.setAttribute('src', image)
+        h4.innerText = name
     }, 3000)
 }
 
