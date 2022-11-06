@@ -1,0 +1,22 @@
+* {
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 60vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+img {
+    width: 200px;
+}
+
+button {
+    width: 100px;
+    cursor: pointer;
+}
