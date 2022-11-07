@@ -1,0 +1,40 @@
+* {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    height: 80vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+
+@keyframes smash {  
+    75% {
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(360deg);
+        opacity: 1;
+    }
+}    
+
+img {
+    width: 200px;
+    height: 200px;
+    animation: smash 4s;
+    animation-iteration-count: 1;
+    cursor: pointer;
+}
+
+button {
+    width: 100px;
+    cursor: pointer;
+}
+
