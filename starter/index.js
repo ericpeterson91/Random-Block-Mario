@@ -25,20 +25,3 @@ const characters = [
     }
 ]
 
-const h4 = document.querySelector('h4')
-const img = document.querySelector('img')
-img.style.animationPlayState = 'paused'
-
-
-img.onclick = () => {
-    img.style.animationPlayState = 'running'
-    const randomIndex = Math.floor(Math.random() * characters.length)
-    const { name, characterImage } = characters[randomIndex]
-
-    setTimeout(() => {
-        img.setAttribute('src', characterImage)
-        h4.innerText = name
-    }, 3000)
-}
-
-

@@ -14,22 +14,9 @@
 }
 
 
-@keyframes smash {  
-    75% {
-        transform: rotate(360deg);
-        opacity: 0;
-    }
-    100% {
-        transform: rotate(360deg);
-        opacity: 1;
-    }
-}    
-
 img {
     width: 200px;
     height: 200px;
-    animation: smash 4s;
-    animation-iteration-count: 1;
     cursor: pointer;
 }
 
